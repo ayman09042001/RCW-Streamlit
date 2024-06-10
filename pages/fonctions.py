@@ -80,4 +80,4 @@ def modifyLineInTable(cursor, warehouse, schema, table, columnName, value, value
     set_values = ', '.join([f"{col} = '{values[col]}'" for col in values if col != columnName])
     query = f"UPDATE {table} SET {set_values} WHERE {columnName} = '{value}'"
     cursor.execute(query)
-    st.write(query)
+    # st.write(query)
